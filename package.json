@@ -6,6 +6,7 @@
     "build:all": "npm run format && npm run lint && npm run build",
     "start": "node .",
     "build": "astro build",
+    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint ."

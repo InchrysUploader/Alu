@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import node from "@astrojs/node";
+import deno from '@astrojs/deno';
 
 import sitemap from "@astrojs/sitemap";
 
@@ -18,8 +18,6 @@ export default defineConfig({
       },
     }),
   ],
-  output: "hybrid",
-  adapter: node({
-    mode: "middleware",
-  }),
+  output: 'server',
+  adapter: deno(),
 });
